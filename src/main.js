@@ -68,7 +68,32 @@ let i = 0
 //以上两段代码不够优化 
 
 
+
+
+var content = document.querySelector(".touch");
+
+let n = 50
 let step = () => {
+  content.addEventListener("touchstart", function(e){
+    e.preventDefault()
+    n = 1
+  })
+  document.getElementById('speedUp').onclick = function(){
+    n = 1
+  }
+  document.getElementById('speedLow').onclick = function(){
+    n = 50
+  }
+  start = function(event){
+    　　var touch = event.targetTouches[0]; //touches数组对象获得屏幕上所有的touch，取第一个touch
+    　　startPos = {x:touch.pageX,y:touch.pageY,time:+new Date}; //取第一个touch的坐标值
+    　　isScrolling = 0; //这个参数判断是垂直滚动还是水平滚动
+    　　this.slider.addEventListener('touchmove',this,false);
+    　　this.slider.addEventListener('touchend',this,false);
+    },
+  document.getElementById('speedLow').onclick = function(){
+    n = 50
+  }
   setTimeout(() => {
     if(string[i] === '\n'){    // \n为HTML代码换行 更换成浏览器输出<br> 
       string2 += '<br>'
@@ -87,7 +112,7 @@ let step = () => {
     i++
     step()
   }
-  },50)
+  }, n)
 }
 
 
