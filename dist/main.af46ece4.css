@@ -13,6 +13,11 @@
   font-weight:bold ;
   word-break: break-all;
 }
+.frame {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+}
 
 
 /* 媒体查询，兼容手机 */
@@ -26,20 +31,15 @@
     height: 50vh;
   }
 
+  
   #TaiJi {
   position: relative;
-   bottom: 0;
-   left: 0;
+  left: 0;
+  bottom: 10px;
   }
+ 
   /* 置于下方 */
 }
-
-  .frame {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-  }
-
 
 
 button {
