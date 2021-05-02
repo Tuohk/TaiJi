@@ -34,4 +34,31 @@
   /* 置于下方 */
 }
 
+  .frame {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+  }
+
+
+
+button {
+  border-radius: 10%;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.btn-1 {
+  background: #95a5a6;
+  background: linear-gradient(0deg, #95a5a6 0%, #34495e 100%);
+  box-shadow: 1px 1px 5px;
+  border: none;
+}
+.btn-1:hover {
+   background: #95a5a6;
+background: linear-gradient(0deg, #34495e 0%, #95a5a6 100%);
+}
+
 /*# sourceMappingURL=/main.af46ece4.css.map */

@@ -126,7 +126,39 @@ var i = 0; // string = string.replace(/\n/g, '<br>')
 // demo.innerHTML = string[i]; 
 //以上两段代码不够优化 
 
+var content = document.querySelector(".touch");
+var n = 50;
+
 var step = function step() {
+  content.addEventListener("touchstart", function (e) {
+    e.preventDefault();
+    n = 1;
+  });
+
+  document.getElementById('speedUp').onclick = function () {
+    n = 1;
+  };
+
+  document.getElementById('speedLow').onclick = function () {
+    n = 50;
+  };
+
+  start = function start(event) {
+    var touch = event.targetTouches[0]; //touches数组对象获得屏幕上所有的touch，取第一个touch
+
+    startPos = {
+      x: touch.pageX,
+      y: touch.pageY,
+      time: +new Date()
+    }; //取第一个touch的坐标值
+
+    isScrolling = 0; //这个参数判断是垂直滚动还是水平滚动
+
+    this.slider.addEventListener('touchmove', this, false);
+    this.slider.addEventListener('touchend', this, false);
+  }, document.getElementById('speedLow').onclick = function () {
+    n = 50;
+  };
   setTimeout(function () {
     if (string[i] === '\n') {
       // \n为HTML代码换行 更换成浏览器输出<br> 
@@ -149,7 +181,7 @@ var step = function step() {
       i++;
       step();
     }
-  }, 50);
+  }, n);
 };
 
 step();
@@ -181,7 +213,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53863" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58128" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
