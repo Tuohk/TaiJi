@@ -21,8 +21,8 @@ body {
 #TaiJi {
   position: fixed;
   right: 0;
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   border: 4px solid black;
   border-radius: 50%;
   background: linear-gradient(90deg, rgba(255,255,255,1) 0%, 
@@ -33,8 +33,8 @@ body {
   position: absolute;
   content: '';
   display: block;
-  width: 150px;
-  height: 146px;
+  width: 90px;
+  height: 86px;
   top: 0;
   background-color: black;
   border-radius: 50%;
@@ -47,8 +47,8 @@ body {
   position: absolute;
   content: '';
   display: block;
-  width: 150px;
-  height: 146px;
+  width: 90px;
+  height: 86px;
   background-color: white;
   border-radius: 50%;
   left: 50%;
