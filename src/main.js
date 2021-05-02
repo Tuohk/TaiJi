@@ -75,7 +75,6 @@ var content = document.querySelector(".touch");
 let n = 50
 let step = () => {
   content.addEventListener("touchstart", function(e){
-    e.preventDefault()
     n = 1
   })
   document.getElementById('speedUp').onclick = function(){
