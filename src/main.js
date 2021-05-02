@@ -70,12 +70,16 @@ let i = 0
 
 
 
-var content = document.querySelector(".touch");
+var speedUp = document.querySelector("#speedUp");
+var speedLow = document.querySelector("#speedLow");
 
 let n = 50
 let step = () => {
-  content.addEventListener("touchstart", function(e){
+  speedUp.addEventListener("touchstart", function(e){
     n = 1
+  })
+  speedLow.addEventListener("touchstart", function(e){
+    n = 50
   })
   document.getElementById('speedUp').onclick = function(){
     n = 1

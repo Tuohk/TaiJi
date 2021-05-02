@@ -126,13 +126,16 @@ var i = 0; // string = string.replace(/\n/g, '<br>')
 // demo.innerHTML = string[i]; 
 //以上两段代码不够优化 
 
-var content = document.querySelector(".touch");
+var speedUp = document.querySelector("#speedUp");
+var speedLow = document.querySelector("#speedLow");
 var n = 50;
 
 var step = function step() {
-  content.addEventListener("touchstart", function (e) {
-    e.preventDefault();
+  speedUp.addEventListener("touchstart", function (e) {
     n = 1;
+  });
+  speedLow.addEventListener("touchstart", function (e) {
+    n = 50;
   });
 
   document.getElementById('speedUp').onclick = function () {
@@ -213,7 +216,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58128" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58392" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
